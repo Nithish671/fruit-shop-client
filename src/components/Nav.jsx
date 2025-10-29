@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-const Nav = ({ user }) => {
+const Nav = ({ setUser ,user }) => {
     return (
         <nav className="bg-gray-900 text-white px-6 py-4 shadow-lg flex justify-between items-center">
             <Link to="/" className="text-2xl font-bold text-yellow-400 hover:text-yellow-300 transition">FruitMart</Link>
@@ -18,6 +18,7 @@ const Nav = ({ user }) => {
                         <Link to="/profile" className="hover:text-yellow-300 transition">Profile</Link>
                         <Link to="/dashboard" className="hover:text-yellow-300 transition">Dashboard</Link>
                         <Link to="/orders" className="hover:text-yellow-300 transition">Orders</Link>
+                        <button onClick={() => setUser(null)} className="hover:text-yellow-300 transition">Log out</button>
                     </>
                 )}
                 <Link to="/fruit-shop" className="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded-lg font-medium transition">Fruit Shop</Link>
